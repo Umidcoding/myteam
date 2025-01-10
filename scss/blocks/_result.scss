@@ -1,0 +1,65 @@
+.result {
+  padding-block: rem(140);
+  background: 
+  url("../../media/img/result-bg-top.svg"), 
+  url("../../media/img/result-bg-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: rem(147) rem(100), rem(200) rem(100);
+  background-position: top left, bottom right;
+
+  &__title {
+    max-width: rem(932);
+    margin: 0 auto;
+    margin-bottom: rem(92);
+    @include font-sty(rem(48), 700, rem(48));
+  }
+
+  &__spn {
+    color: $color-spn;
+  }
+
+  &__list {
+    @include list-unstyled;
+  }
+  &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: rem(67);
+      height: rem(56);
+      background: url("../../media/img/result-bg.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      top: -40px;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 1;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  &__text {
+    @include font-sty();
+    margin-bottom: rem(24);
+  }
+
+  &__subtitle {
+    @include font-sty(rem(18), 700);
+    color: $color-spn;
+    margin-bottom: rem(6);
+  }
+
+  &__skills {
+    @include font-sty(rem(13),600, rem(18));
+    font-style: italic;
+    margin-bottom: rem(32);
+  }
+}

@@ -1,5 +1,46 @@
 @mixin list-unstyled {
+  display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@mixin text-dec-none {
+  text-decoration: none;
+}
+
+@mixin breakpoint-down($size) {
+  @media only screen and (max-width:$size) {
+    @content;
+  }
+}
+
+@mixin font-sty($f-size:rem(15), $f-weight:600,$f-lineh: rem(28)) {
+  font-size:$f-size;
+  font-weight: $f-weight;
+  color: $color-light;
+}
+
+@mixin t-btn($btn-bg: transparent, $btn-color:$bg-color-10, $border-color:$color-light) {
+  font-size: rem(18);
+  font-weight: 600;
+  line-height: rem(28);
+  background-color: $btn-bg;
+  color: $color-light;
+  border: rem(1) solid $color-light;
+  border-radius: rem(24);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $color-light;
+    color: $bg-color-10;
+  }
+}
+
+@mixin mt-before($mt-bf: none) {
+  content: "";
+  width: rem(50);
+  height: rem(4); 
+  background-color: $mt-bf;
 }

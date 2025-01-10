@@ -1,0 +1,59 @@
+.build {
+  padding-block: rem(140);
+  background: url("../../media/img/build-bg-bt.png");
+  background-repeat: no-repeat;
+  background-size: rem(100) rem(244);
+  background-position: right bottom;
+  background-color: $bg-color-20;
+
+  &__title {
+    @include font-sty(rem(48), 700, rem(48));
+
+    &::before {
+      @include mt-before($color-orange);
+      display: block;
+      position: relative;
+      bottom: rem(54);
+    }
+  }
+
+  &__help-list {
+    list-style: none;
+  }
+
+  &__help-item {
+    margin-bottom: rem(32);
+    display: flex;
+
+    &::before {
+      content: "";
+      display:block;
+      width: rem(101);
+      height: rem(72);
+      background: url("../../media/img/build-ind.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-right: rem(23);
+    }
+
+    &:nth-child(2)::before {
+      background: url("../../media/img/build-settings.svg");
+    }
+
+    &:nth-child(3)::before {
+      background: url("../../media/img/build-pr.svg");
+    }
+  }
+
+  &__help-text--active {
+    @include font-sty(rem(18), 700, rem(28));
+    color: $color-orange;
+    margin-bottom: rem(16);
+  }
+
+  &__help-text {
+    @include font-sty();
+  }
+
+}

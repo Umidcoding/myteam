@@ -1,0 +1,109 @@
+.header {
+  padding-block: rem(73);
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center
+  }
+
+  &__list {
+    @include list-unstyled();
+    margin-inline-start: rem(60);
+  }
+
+  &__item {
+    margin-left: rem(40);
+  }
+
+  &__link {
+    @include font-sty(rem(18), 600, rem(28));
+    @include text-dec-none();
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__btn {
+    @include t-btn();
+    padding-inline: rem(32);
+    padding-block: rem(9) rem(11);
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__burger-btn {
+    border: none;
+    background-color: transparent;
+    color: $color-light;
+    font-size: rem(40);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 60%;
+    height: 100vh;
+    background: url("../../media/img/menu-bg.png");
+    background-repeat: no-repeat;
+    background-size: rem(100), rem(200);
+    background-position: bottom right;
+    background-color: $bg-menu;
+    padding-block-start: rem(112);
+    transform: translateX(100%);
+    transition: all 0.3s ease
+  }
+
+  &__menu-list {
+    @include list-unstyled();
+    flex-direction: column;
+  }
+
+  &__menu-item {
+    margin-bottom: rem(24);
+  }
+
+  &__menu-btn {
+    @include t-btn();
+    padding-inline: rem(32);
+    padding-block: rem(9) rem(11);
+  }
+
+  &__menu-close {
+    position: absolute;
+    top: rem(56);
+    right: rem(25);
+    border: none;
+    background-color: transparent;
+    color: $color-light;
+    font-size: rem(40);
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+
+  &__trfm {
+    transform: translateX(0);
+    transition: all 0.3s ease;
+  }
+}

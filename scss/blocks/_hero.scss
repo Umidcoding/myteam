@@ -1,0 +1,30 @@
+.hero {
+  padding-top: rem(129);
+  padding-bottom: rem(250);
+  background: url("../../media/img/hero-bg-bottom.png"),url("../../media/img/hero-bg-left.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: rem(358) rem(100), rem(100) rem(200) ;
+  background-position: bottom right rem(165), center left; 
+ 
+  &__title {
+    max-width: rem(590);
+    @include font-sty(rem(100), 700, rem(100));
+    margin: 0 auto;
+  }
+
+  &__spn {
+    color: $color-orange;
+  }
+
+  &__text {
+    max-width: rem(445);
+    @include font-sty(rem(18), 600, rem(28));
+    margin: 0 auto;
+
+    &::before {
+      @include mt-before(#79C8C7);
+      display: block;
+      margin-bottom: rem(79);
+    }
+  }
+}

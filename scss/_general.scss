@@ -16,7 +16,9 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  font-family: $font-fm;
   overflow-x: hidden;
+  background-color: $bg-color-10;
 }
 
 img {
@@ -24,4 +26,13 @@ img {
   height: auto;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}

@@ -1,4 +1,21 @@
 // CONTAINER
-$container-width:1200px;
+$max-xs:576px; 
+$max-sm:768px ;
+$max-md:992px;
+$max-lg:1200px;
+$container-width:1150px;
 $p-container:20px;
 
+
+// COLORS
+$bg-color-10:#014e56;
+$bg-color-20:#012f34;
+$bg-color-30:#002529;
+$bg-menu:#2c6269;
+$color-light:#fff;
+$color-orange:#f67e7e;
+$color-btn:#004047;
+$color-spn:#79c8c7; 
+
+// FONTS
+$font-fm:"Livvic", serif;

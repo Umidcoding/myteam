@@ -1,0 +1,26 @@
+.contact {
+  padding-block: rem(76);
+  background: url("../../media/img/contacts-bg.svg");
+  background-repeat: no-repeat;
+  background-size: rem(200) rem(144);
+  background-position: bottom left;
+  background-color: $color-orange;
+
+  &__title {
+    @include font-sty(rem(48), 700, rem(48));
+    color: $bg-color-30;
+  }
+
+  &__btn {
+    @include t-btn();
+    color: $bg-color-30;
+    border-color: $bg-color-30;
+    padding-block: rem(9);
+    padding-inline: rem(32);
+
+    &:hover {
+      background-color: $bg-color-30;
+      color: $color-orange;
+    }
+  }
+}
